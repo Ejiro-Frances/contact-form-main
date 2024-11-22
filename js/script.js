@@ -24,7 +24,6 @@ const queryError = document.querySelector("#query-error");
 const consentError = document.querySelector("#consent-error");
 const userMessageError = document.querySelector("#user-message-error");
 
-const body = (document.querySelector("body").style.overflow = "hidden");
 // Helper function to show/hide error messages
 function updateVisibility(element, shouldShow) {
   if (shouldShow) {

@@ -1,4 +1,4 @@
-@import @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap')
 @import './utils/fonts.sass'
 @import './utils/colors.sass'
 @import './utils/mixin.sass'
@@ -14,13 +14,14 @@
 
 html
   font-size: 60%
+  overflow-x: hidden
 
 body
   @include flex-col
   min-height: 100vh
   background: $green-lighter
   font-family: "Karla", serif
-  padding: 6rem 0.5rem
+  padding: 5rem 0
   overflow-x: hidden
 
 .success-message
@@ -47,8 +48,7 @@ body
 
 main
   background: $white
-  //max-width: 95%
-  //margin: 1rem
+  margin: .5rem
   padding: 1.5rem
   color: $grey-darker
   border-radius: px-rem(15)
@@ -85,6 +85,7 @@ input
   border-right: 1px solid $grey-medium
   border-top: 1.5px solid $grey-medium
   border-bottom: 1.5px solid $grey-medium
+  background: $white
   &:hover
     border-top: 1.5px solid $green-medium
     border-bottom: 1.5px solid $green-medium
@@ -92,21 +93,18 @@ input
     box-shadow: 0 0 1px
   &::placeholder
     color: $grey-darker
-    background: $white
+    
   &.active-error
     border: 1px solid $red
     box-shadow: 0 0 1px
     &::placeholder
       color: $red
 
-
-
 .error-message
   color:$red
   margin-bottom: 1rem
   opacity: 0.9
   font-size: 1rem
-
 
 .query-div
   margin: 1rem 0
@@ -145,10 +143,10 @@ input[type="checkbox"]:checked
   border-radius: .6rem
   outline: none
   border: 1px solid $grey-medium
-  resize: both
+  resize: vertical
   padding: 1rem
   margin-bottom: .3rem
-  font-size: clamp(px-rem(14), 4vw + 1rem, px-rem(18))
+  font-size: clamp(px-rem(16), 4vw + 1rem, px-rem(18))
   &:hover
     border-top: 1.5px solid $green-medium
     border-bottom: 1.5px solid $green-medium
