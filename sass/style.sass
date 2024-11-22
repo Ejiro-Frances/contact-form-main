@@ -1,0 +1,194 @@
+@import @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap')
+@import './utils/fonts.sass'
+@import './utils/colors.sass'
+@import './utils/mixin.sass'
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+*
+  margin: 0
+  padding: 0
+
+html
+  font-size: 60%
+
+body
+  @include flex-col
+  min-height: 100vh
+  background: $green-lighter
+  font-family: "Karla", serif
+  padding: 6rem 0.5rem
+  overflow-x: hidden
+
+.success-message
+  background: $grey-darker
+  color: $green-lighter
+  padding: 1rem
+  font-size: 1.125rem
+  border-radius: .4rem
+  article
+    @include flex-start($direction:row)
+    gap: .7rem
+    h5
+      font-size: 1.3rem
+
+    img
+      width: 1.2rem
+    
+    p
+      padding-top: .7em  
+
+
+.hide
+  display: none
+
+main
+  background: $white
+  //max-width: 95%
+  //margin: 1rem
+  padding: 1.5rem
+  color: $grey-darker
+  border-radius: px-rem(15)
+
+  h1
+    font-size:clamp(px-rem(24), 6vw + 1 rem, px-rem(45))
+  
+  form
+    margin-top: 2rem
+
+    label,
+    p
+      font-size: clamp(px-rem(16), 4vw + 1rem, px-rem(23))
+
+.star-mark
+  color: $green-medium
+  font-size: 1rem
+  padding-left: 0.5rem
+
+      
+fieldset
+  @include flex-start
+  border: none
+    
+  
+input
+  margin: 0.7rem 0
+  padding: 1rem
+  border-radius: .4rem
+  outline: none
+  width: 100%
+  position: relative
+  border-left: 1px solid $grey-medium
+  border-right: 1px solid $grey-medium
+  border-top: 1.5px solid $grey-medium
+  border-bottom: 1.5px solid $grey-medium
+  &:hover
+    border-top: 1.5px solid $green-medium
+    border-bottom: 1.5px solid $green-medium
+    cursor: pointer
+    box-shadow: 0 0 1px
+  &::placeholder
+    color: $grey-darker
+    background: $white
+  &.active-error
+    border: 1px solid $red
+    box-shadow: 0 0 1px
+    &::placeholder
+      color: $red
+
+
+
+.error-message
+  color:$red
+  margin-bottom: 1rem
+  opacity: 0.9
+  font-size: 1rem
+
+
+.query-div
+  margin: 1rem 0
+  border: 1px solid $grey-medium
+  border-radius: .4rem
+  padding: 1rem 1.5rem
+  &:hover
+    border-top: 1.5px solid $green-medium
+    border-bottom: 1.5px solid $green-medium
+    cursor: pointer
+    box-shadow: 0 0 1px
+    background: $green-lighter
+  &.active-error
+    border: 1px solid $red
+    box-shadow: 0 0 1px
+  input
+    margin: 0
+    padding: 0
+    width: unset
+    box-shadow: unset
+    
+  label
+    padding-left: .4rem
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked
+  accent-color: $green-medium
+  box-shadow: unset
+
+.message
+  padding: 1.5rem 0 0.6rem     
+
+#user-message
+  width: 100%
+  min-height: px-rem(250)
+  border-radius: .6rem
+  outline: none
+  border: 1px solid $grey-medium
+  resize: both
+  padding: 1rem
+  margin-bottom: .3rem
+  font-size: clamp(px-rem(14), 4vw + 1rem, px-rem(18))
+  &:hover
+    border-top: 1.5px solid $green-medium
+    border-bottom: 1.5px solid $green-medium
+    cursor: pointer
+  &.active-error
+    border: 1px solid $red
+    box-shadow: 0 0 1px
+    &::placeholder
+      color: $red
+    
+
+.consent-div
+  @include flex-start($direction:row)
+  margin: 2rem 0 .6rem
+  input
+    width: unset
+    padding: 0
+    margin: 0
+  
+  label
+    padding-left: 1rem
+ 
+
+.submit-btn
+  background: $green-medium
+  color: $white
+  padding: .8rem
+  margin: .9rem auto
+  border: none
+  min-width: 100%
+  border-radius: .4rem
+  &:hover
+    cursor: pointer
+    box-shadow: 1px 1px 4px $green-darker
+    background: $green-darker
+
+.attribution
+  font-size: 11px
+  text-align: center
+  a
+    color: hsl(228, 45%, 44%)
+
+@import './utils/responsive.sass'

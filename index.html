@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="./sass/style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="success-message hide">
+        <article>
+          <img
+            src="./assets/images/icon-success-check.svg"
+            alt="success checked image"
+          />
+          <h5>Message Sent!</h5>
+        </article>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </section>
+    </header>
+    <main id="main-form">
+      <h1>Contact Us</h1>
+      <form novalidate>
+        <fieldset class="name-sect">
+          <div class="name">
+            <label for="firstName"
+              >First Name<span class="star-mark">*</span></label
+            >
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              aria-required="true"
+            />
+            <p
+              aria-errormessage="error"
+              class="error-message hide"
+              id="first-name-error"
+            >
+              This field is required
+            </p>
+          </div>
+          <div class="name">
+            <label for="lastName"
+              >Last Name<span class="star-mark">*</span></label
+            >
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              aria-required="true"
+            />
+            <p class="error-message hide" id="last-name-error">
+              This field is required
+            </p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label for="emailAddress">
+            Email Address<span class="star-mark">*</span></label
+          >
+          <input
+            type="email"
+            id="emailAddress"
+            name="userEmail"
+            aria-required="true"
+          />
+          <p class="error-message hide" id="email-error">
+            Please enter a valid email address
+          </p>
+        </fieldset>
+        <fielsdet class="query-type">
+          <p>Query Type<span class="star-mark">*</span></p>
+          <article class="query-sect">
+            <div class="query-div" id="general-query-div">
+              <input
+                type="radio"
+                id="gen-query"
+                class="general-support"
+                name="query-selection"
+              />
+              <label for="gen-query">General Enquiry</label>
+            </div>
+
+            <div class="query-div" id="support-query-div">
+              <input
+                type="radio"
+                id="sup-request"
+                class="general-support"
+                name="query-selection"
+              />
+              <label for="sup-request">Support Request</label>
+            </div>
+          </article>
+          <p class="error-message hide" id="query-error">
+            Please select a query type
+          </p>
+        </fielsdet>
+
+        <p class="message">Message<span class="star-mark">*</span></p>
+        <textarea name="user_message" id="user-message"></textarea>
+        <p class="error-message hide" id="user-message-error">
+          This field is required
+        </p>
+        <fieldset class="consent-area">
+          <div class="consent-div">
+            <input
+              type="checkbox"
+              name="check"
+              id="checkbox"
+              aria-required="true"
+            />
+            <label for="checkbox"
+              >I consent to being contacted by the team<span class="star-mark"
+                >*</span
+              ></label
+            >
+          </div>
+          <p class="error-message hide" id="consent-error">
+            To submit this form, please consent to being contacted
+          </p>
+        </fieldset>
+
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://x.com/france_ssa">Ejiro-Frances</a>.
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+@mixin flex-col($display: flex, $justify: center, $align: center, $direction:column)
+  display: $display
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direction
+
+@mixin flex-row($display: flex, $justify: center, $align: center, $direction:row)
+  display: $display
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direction
+
+@mixin flex-start($display: flex, $justify: flex-start, $direction:column)
+  display: $display
+  justify-content: $justify
+  flex-direction: $direction
+
+@mixin flex-between($display: flex, $justify: space-between)
+  display: $display
+  justify-content: $justify
+
+
